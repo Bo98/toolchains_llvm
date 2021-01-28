@@ -285,4 +285,7 @@ def llvm_repo_impl(rctx):
     # do want to make changes, then we should do it through a patch file, and
     # document it for users of toolchain_roots attribute.
 
+    rctx.execute(["cp", "lib/libc++.a", "lib/libc++-static.a"])
+    rctx.execute(["cp", "lib/libc++abi.a", "lib/libc++abi-static.a"])
+
     return updated_attrs

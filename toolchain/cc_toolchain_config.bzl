@@ -161,7 +161,7 @@ def cc_toolchain_config(
         link_flags.extend([
             "-fuse-ld=lld",
             "-Wl,--build-id=md5",
-            "-Wl,--hash-style=gnu",
+            "-Wl,--hash-style=both",
             "-Wl,-z,relro,-z,now",
         ])
 

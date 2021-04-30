@@ -152,6 +152,9 @@ def cc_toolchain_config(
         link_flags.extend([
             "-headerpad_max_install_names",
             "-fobjc-link-runtime",
+
+            # For Big Sur/Cataline compatibility
+            "-mlinker-version=400",
         ])
     else:
         # Note that for xcompiling from darwin to linux, the native ld64 is

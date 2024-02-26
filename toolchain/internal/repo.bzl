@@ -288,4 +288,9 @@ def llvm_repo_impl(rctx):
     rctx.execute(["cp", "lib/libc++.a", "lib/libc++-static.a"])
     rctx.execute(["cp", "lib/libc++abi.a", "lib/libc++abi-static.a"])
 
+    rctx.delete("lib/libunwind.1.0.dylib")
+    rctx.delete("lib/libunwind.1.dylib")
+    rctx.delete("lib/libunwind.dylib")
+    rctx.delete("lib/libunwind.a")
+
     return updated_attrs
